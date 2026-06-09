@@ -15,7 +15,7 @@ const FEATURE_CARDS = [
   },
   {
     img: "valgo-feature-2",
-    panel: "bg-teal-900",
+    panel: "bg-teal-700",
     titleClass: "text-fg-on-dark",
     accentClass: "text-lime-300",
     descClass: "text-fg-on-dark-2",
@@ -37,7 +37,6 @@ const FEATURE_CARDS = [
   },
 ];
 
-/** Three feature cards; the description expands on hover (always open on touch). */
 export function FeatureGrid() {
   return (
     <section id="work" className="surface-dark">

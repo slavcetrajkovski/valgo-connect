@@ -1,4 +1,6 @@
-import { Reveal, SlotNumber } from "@/app/components/motion";
+"use client";
+
+import { Reveal, SlotNumber, useInView } from "@/app/components/motion";
 
 const ROI_STATS = [
   {
@@ -21,8 +23,13 @@ const ROI_STATS = [
   },
 ];
 
-/** "Success in numbers" — headline figures roll into place like a slot reel. */
 export function RoiStats() {
+  // Roll every number together the moment the stat grid scrolls into view.
+  const { ref: gridRef, inView } = useInView<HTMLDivElement>({
+    threshold: 0.25,
+    rootMargin: "0px 0px -10% 0px",
+  });
+
   return (
     <section id="proof" className="bg-paper-2">
       <div className="mx-auto w-full max-w-6xl px-6 py-24 lg:py-32">
@@ -36,7 +43,10 @@ export function RoiStats() {
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid gap-x-16 gap-y-12 lg:grid-cols-2 lg:gap-y-20">
+        <div
+          ref={gridRef}
+          className="mt-16 grid gap-x-16 gap-y-12 lg:grid-cols-2 lg:gap-y-20"
+        >
           {ROI_STATS.map((r, i) => (
             <Reveal key={r.value} delay={i * 80}>
               <div className="flex items-end justify-between gap-6 border-b border-border pb-6">
@@ -54,6 +64,7 @@ export function RoiStats() {
                 </div>
                 <SlotNumber
                   value={r.value}
+                  play={inView}
                   className="font-serif text-[clamp(3.5rem,7vw,6.5rem)] leading-none text-fg1"
                 />
               </div>

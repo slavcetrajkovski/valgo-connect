@@ -1,110 +1,105 @@
 @import "tailwindcss";
 
 :root {
-  /* ===== TEAL SCALE (primary) ===== */
   --teal-900: #00332c;
   --teal-800: #004f45;
-  --teal-700: #01655b; /* PRIMARY brand color */
+  --teal-700: #01655b;
   --teal-500: #25897a;
   --teal-300: #47b5a3;
 
-  /* ===== LIME SCALE (secondary) ===== */
   --lime-700: #77890a;
   --lime-600: #92af19;
-  --lime-500: #a6cc2e; /* SECONDARY brand color */
+  --lime-500: #a6cc2e;
   --lime-300: #cbe852;
   --lime-100: #efff8f;
 
-  /* ===== NEUTRALS (warm-cool grays toward teal) ===== */
-  --ink: #0a1a18; /* near-black text on light */
-  --paper: #ffffff; /* base page surface */
-  --paper-2: #f4f7f5; /* subtle off-white panel */
-  --paper-3: #e8eeeb; /* hairline / divider fill */
-  --mist: #d2deda; /* borders on light */
-  --slate: #5b6b67; /* muted body text */
+  --ink: #0a1a18;
+  --paper: #ffffff;
+  --paper-2: #f4f7f5;
+  --paper-3: #e8eeeb;
+  --mist: #d2deda;
+  --slate: #5b6b67;
 
-  /* ===== BRAND ALIASES ===== */
   --brand-primary: var(--teal-700);
   --brand-primary-d: var(--teal-800);
   --brand-primary-dd: var(--teal-900);
   --brand-accent: var(--lime-500);
   --brand-accent-d: var(--lime-600);
 
-  /* ===== SEMANTIC FG / BG ===== */
-  --fg1: var(--ink); /* primary text on light */
-  --fg2: var(--slate); /* secondary / muted text */
-  --fg3: #8a9794; /* tertiary, captions */
-  --fg-on-dark: #eaf3f0; /* primary text on teal/dark */
-  --fg-on-dark-2: #a9c7c0; /* muted text on dark */
+  --fg1: var(--ink);
+  --fg2: var(--slate);
+  --fg3: #8a9794;
+  --fg-on-dark: #eaf3f0;
+  --fg-on-dark-2: #a9c7c0;
 
-  --bg1: var(--paper); /* page */
-  --bg2: var(--paper-2); /* raised panel */
-  --bg-dark: var(--teal-900); /* dark section */
-  --bg-brand: var(--teal-700); /* brand section */
+  --bg1: var(--paper);
+  --bg2: var(--paper-2);
+  --bg-dark: var(--teal-900);
+  --bg-brand: var(--teal-700);
 
   --border: var(--mist);
   --border-strong: #b7c7c2;
 
-  /* ===== GRADIENTS ===== */
   --grad-teal: linear-gradient(90deg, #47b5a3 0%, #01655b 50%, #00332c 100%);
   --grad-lime: linear-gradient(90deg, #efff8f 0%, #a6cc2e 55%, #77890a 100%);
   --grad-hero: linear-gradient(135deg, #01655b 0%, #00332c 100%);
 
-  /* Modern oklab interpolation (Superside technique) + Framer-style depth */
-  --grad-teal-oklab: linear-gradient(in oklab, #47b5a3 0%, #01655b 50%, #00332c 100%);
-  --grad-lime-oklab: linear-gradient(in oklab, #efff8f 0%, #a6cc2e 60%, #77890a 100%);
-  --grad-hero-mesh: radial-gradient(120% 120% at 0% 0%, #01655b 0%, #00332c 62%, #00231e 100%);
+  --grad-teal-oklab: linear-gradient(
+    in oklab,
+    #47b5a3 0%,
+    #01655b 50%,
+    #00332c 100%
+  );
+  --grad-lime-oklab: linear-gradient(
+    in oklab,
+    #efff8f 0%,
+    #a6cc2e 60%,
+    #77890a 100%
+  );
+  --grad-hero-mesh: radial-gradient(
+    120% 120% at 0% 0%,
+    #01655b 0%,
+    #00332c 62%,
+    #00231e 100%
+  );
   --grad-spotlight: radial-gradient(
     60% 80% at 50% 0%,
     rgba(166, 204, 46, 0.18) 0%,
     transparent 70%
   );
 
-  /* ===== MOTION (grounded in Superside 100–500ms / Framer easings) ===== */
   --duration-fast: 150ms;
   --duration-base: 250ms;
   --duration-slow: 400ms;
   --duration-slower: 600ms;
 
-  /* ===== FOCUS RING (teal-500) ===== */
   --ring-color: var(--teal-500);
   --ring-offset: var(--paper);
 }
 
-/* ============================================================
-   Expose tokens to Tailwind v4 utilities.
-   `inline` keeps the var() references (needed for next/font
-   variables that are only set at runtime on <html>).
-   ============================================================ */
 @theme inline {
-  /* ----- Fonts ----- */
   --font-sans:
     var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-body:
     var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-display: var(--font-anton), "Arial Narrow", sans-serif;
-  /* Editorial serif for italic accent words (Superside's Instrument Serif move).
-     Falls back to Times/Georgia until/unless Instrument Serif is added. */
   --font-serif:
     var(--font-instrument-serif), "Instrument Serif", "Times New Roman", Times,
     Georgia, serif;
   --font-mono: ui-monospace, "SF Mono", "Cascadia Code", monospace;
 
-  /* ----- Teal scale ----- */
   --color-teal-900: var(--teal-900);
   --color-teal-800: var(--teal-800);
   --color-teal-700: var(--teal-700);
   --color-teal-500: var(--teal-500);
   --color-teal-300: var(--teal-300);
 
-  /* ----- Lime scale ----- */
   --color-lime-700: var(--lime-700);
   --color-lime-600: var(--lime-600);
   --color-lime-500: var(--lime-500);
   --color-lime-300: var(--lime-300);
   --color-lime-100: var(--lime-100);
 
-  /* ----- Neutrals ----- */
   --color-ink: var(--ink);
   --color-paper: var(--paper);
   --color-paper-2: var(--paper-2);
@@ -112,31 +107,26 @@
   --color-mist: var(--mist);
   --color-slate: var(--slate);
 
-  /* ----- Brand aliases ----- */
   --color-brand-primary: var(--brand-primary);
   --color-brand-primary-d: var(--brand-primary-d);
   --color-brand-primary-dd: var(--brand-primary-dd);
   --color-brand-accent: var(--brand-accent);
   --color-brand-accent-d: var(--brand-accent-d);
 
-  /* ----- Semantic foreground ----- */
   --color-fg1: var(--fg1);
   --color-fg2: var(--fg2);
   --color-fg3: var(--fg3);
   --color-fg-on-dark: var(--fg-on-dark);
   --color-fg-on-dark-2: var(--fg-on-dark-2);
 
-  /* ----- Semantic background ----- */
   --color-bg1: var(--bg1);
   --color-bg2: var(--bg2);
   --color-bg-dark: var(--bg-dark);
   --color-bg-brand: var(--bg-brand);
 
-  /* ----- Borders ----- */
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
 
-  /* ----- Defaults so bg-background / text-foreground resolve ----- */
   --color-background: var(--bg1);
   --color-foreground: var(--fg1);
 }
@@ -152,27 +142,17 @@ body {
     sans-serif;
 }
 
-/* ============================================================
-   STRUCTURAL TOKENS — the layers valgo was missing, ported
-   from Superside (restraint, pill buttons, type rhythm) and
-   Framer (layered elevation, colored glow, bold display).
-   Plain @theme (not inline): emits :root vars AND generates
-   utilities (rounded-*, shadow-*, ease-*, text-display-*).
-   ============================================================ */
 @theme {
-  /* ----- Radii → rounded-* (Superside: pills + soft cards) ----- */
-  --radius-xs: 0.25rem; /* 4px  — chips, tags */
-  --radius-sm: 0.5rem; /* 8px  — inputs, small controls */
-  --radius-md: 0.75rem; /* 12px — rectangular buttons, badges */
-  --radius-lg: 1rem; /* 16px — cards */
-  --radius-xl: 1.5rem; /* 24px — feature panels, modals */
-  --radius-2xl: 2rem; /* 32px — hero media, large surfaces */
-  --radius-pill: 999px; /* fully rounded — primary CTAs, avatars */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-pill: 999px;
 
-  /* ----- Elevation → shadow-* (Framer layers, teal-tinted #00332c) ----- */
   --shadow-xs: 0 1px 2px rgba(0, 51, 44, 0.06);
-  --shadow-sm:
-    0 1px 2px rgba(0, 51, 44, 0.06), 0 1px 1px rgba(0, 51, 44, 0.04);
+  --shadow-sm: 0 1px 2px rgba(0, 51, 44, 0.06), 0 1px 1px rgba(0, 51, 44, 0.04);
   --shadow-md:
     0 6px 16px -4px rgba(0, 51, 44, 0.1), 0 2px 6px -2px rgba(0, 51, 44, 0.06);
   --shadow-lg:
@@ -181,24 +161,16 @@ body {
   --shadow-xl:
     0 28px 64px -12px rgba(0, 51, 44, 0.24),
     0 8px 20px -8px rgba(0, 51, 44, 0.1);
-  /* Colored glows — Framer's signature move, in valgo brand */
   --shadow-glow-teal:
     0 0 0 1px rgba(1, 101, 91, 0.35), 0 10px 32px -8px rgba(1, 101, 91, 0.45);
   --shadow-glow-lime:
     0 0 0 1px rgba(166, 204, 46, 0.4), 0 10px 32px -8px rgba(166, 204, 46, 0.55);
 
-  /* ----- Easings → ease-* ----- */
-  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* Superside */
-  --ease-in-out-soft: cubic-bezier(0.44, 0, 0.56, 1); /* Framer */
-  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1); /* dramatic reveals */
-  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1); /* crisp control settles */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in-out-soft: cubic-bezier(0.44, 0, 0.56, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 
-  /* ----- Fluid display scale → text-display-* -----
-     Tuned to the REFERENCES: Superside runs headings at weight 400/500,
-     Framer pulls 110px type to -5.5px tracking (~-0.05em). That tight
-     negative letter-spacing is what makes big type read as designed.
-     Pair these with font-sans (Inter) — a grotesque, like both sites —
-     NOT the Anton poster face. */
   --text-display-md: clamp(1.75rem, 1rem + 2vw, 2.75rem);
   --text-display-md--line-height: 1.08;
   --text-display-md--font-weight: 500;
@@ -219,7 +191,6 @@ body {
   --text-display-2xl--font-weight: 500;
   --text-display-2xl--letter-spacing: -0.04em;
 
-  /* ----- Animations → animate-* (scroll-reveal entrances) ----- */
   --animate-fade-up: fade-up var(--duration-slow) var(--ease-out-expo) both;
   --animate-fade-in: fade-in var(--duration-base) var(--ease-standard) both;
   --animate-rise: rise var(--duration-slower) var(--ease-out-expo) both;
@@ -254,8 +225,6 @@ body {
   }
 }
 
-/* Infinite vertical image rail (Superside hero). Each track holds its
-   cards twice; -50% loops seamlessly. Adjacent columns run opposite ways. */
 @keyframes hero-rail-up {
   from {
     transform: translate3d(0, 0, 0);
@@ -273,7 +242,6 @@ body {
   }
 }
 
-/* Horizontal brand marquee — two rows running opposite directions. */
 @keyframes marquee-x {
   from {
     transform: translate3d(0, 0, 0);
@@ -292,13 +260,11 @@ body {
 }
 
 @layer base {
-  /* Accessible, shape-agnostic focus — works on pills and cards alike */
   :focus-visible {
     outline: 2px solid var(--ring-color);
     outline-offset: 2px;
   }
 
-  /* Respect reduced-motion (both refs are scroll-linked — be considerate) */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -312,7 +278,6 @@ body {
 }
 
 @layer components {
-  /* ===== BUTTON — Superside anatomy: primary/tertiary × sm/md/lg, pill ===== */
   .btn {
     display: inline-flex;
     align-items: center;
@@ -340,7 +305,6 @@ body {
     pointer-events: none;
   }
 
-  /* sizes */
   .btn-sm {
     height: 2.25rem;
     padding-inline: 0.875rem;
@@ -357,7 +321,6 @@ body {
     font-size: 1.0625rem;
   }
 
-  /* variants */
   .btn-primary {
     background: var(--brand-primary);
     color: var(--fg-on-dark);
@@ -385,7 +348,6 @@ body {
     border-color: var(--brand-primary);
   }
 
-  /* ===== CARD — soft elevation, lifts on interaction (Framer feel) ===== */
   .card {
     background: var(--bg1);
     border: 1px solid var(--border);
@@ -403,7 +365,6 @@ body {
     border-color: var(--border-strong);
   }
 
-  /* ===== SURFACES — drop onto a section for brand/dark context ===== */
   .surface-brand {
     background: var(--bg-brand);
     color: var(--fg-on-dark);
@@ -416,13 +377,11 @@ body {
     background: var(--grad-hero-mesh);
     color: var(--fg-on-dark);
   }
-  /* Superside's signature: a bright full-bleed lime CTA band with dark text */
   .surface-lime {
     background: var(--lime-500);
     color: var(--teal-900);
   }
 
-  /* ===== ACCENT — editorial serif italic word inside a headline (Superside) ===== */
   .accent-serif {
     font-family: var(--font-serif);
     font-style: italic;
@@ -430,8 +389,6 @@ body {
     letter-spacing: 0;
   }
 
-  /* ===== SCROLL HELPERS — Superside comparison table ===== */
-  /* Hide the horizontal scrollbar on the swipeable comparison table. */
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -439,7 +396,6 @@ body {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
-  /* Fade the right edge so the table reads as "scroll for more". */
   .gradient-mask-r {
     -webkit-mask-image: linear-gradient(
       to right,
@@ -453,7 +409,6 @@ body {
     );
   }
 
-  /* ===== HERO IMAGE RAIL — infinitely scrolling vertical columns ===== */
   .hero-rail-track {
     display: flex;
     flex-direction: column;
@@ -469,7 +424,6 @@ body {
     }
   }
 
-  /* ===== BRAND MARQUEE — horizontal, infinite, dual-direction ===== */
   .marquee-x-track {
     display: flex;
     width: max-content;

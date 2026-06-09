@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
@@ -32,10 +33,31 @@ const anton = localFont({
   src: "./fonts/Anton-Regular.ttf",
 });
 
+const ogImage =
+  "https://td633eg4xc.ufs.sh/f/1LKkK5jLRD7WInM843XnrmVfesKR5EYoa9pu0yzdQ6h7AFb3";
+
 export const metadata: Metadata = {
-  title: "Valgo Connect — World-class Macedonian talent for US businesses",
-  description:
-    "Valgo Connect recruits, vets and manages highly educated professionals in North Macedonia for US businesses — talent outsourcing plus full foreign entity setup and management. More value per dollar.",
+  title: "Valgo Connect",
+  description: "Where US ambition meets European excellence.",
+  openGraph: {
+    title: "Valgo Connect",
+    description: "Where US ambition meets European excellence.",
+    type: "website",
+    images: [
+      {
+        url: ogImage,
+        width: 1890,
+        height: 1890,
+        alt: "Valgo Connect",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Valgo Connect",
+    description: "Where US ambition meets European excellence.",
+    images: [ogImage],
+  },
 };
 
 export default function RootLayout({
@@ -49,6 +71,7 @@ export default function RootLayout({
       className={`${inter.variable} ${anton.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
+      <Analytics />
     </html>
   );
 }

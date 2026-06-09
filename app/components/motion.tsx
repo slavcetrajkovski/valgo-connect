@@ -7,6 +7,37 @@ const prefersReducedMotion = () =>
   window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /**
+ * useInView — flips to true the first time `ref` scrolls into view (then
+ * stops observing). Honors reduced-motion by reporting "in view" immediately.
+ */
+export function useInView<T extends Element>(
+  options?: IntersectionObserverInit,
+) {
+  const ref = useRef<T>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (prefersReducedMotion()) {
+      setInView(true);
+      return;
+    }
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setInView(true);
+        io.disconnect();
+      }
+    }, options);
+    io.observe(el);
+    return () => io.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return { ref, inView };
+}
+
+/**
  * Parallax — drifts its children as the element moves through the viewport.
  * `speed` 0.1–0.4 is subtle; negative drifts the other way.
  */
@@ -110,14 +141,26 @@ export function Reveal({
 export function SlotNumber({
   value,
   className,
+  play,
 }: {
   value: string;
   className?: string;
+  /**
+   * Drives the roll externally so a group of numbers can start together when
+   * a shared container scrolls into view. When omitted, the number falls back
+   * to observing itself.
+   */
+  play?: boolean;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const [rolled, setRolled] = useState(false);
 
   useEffect(() => {
+    // Externally controlled — roll when the parent says so.
+    if (play !== undefined) {
+      if (play) setRolled(true);
+      return;
+    }
     const el = ref.current;
     if (!el) return;
     if (prefersReducedMotion()) {
@@ -135,7 +178,7 @@ export function SlotNumber({
     );
     io.observe(el);
     return () => io.disconnect();
-  }, []);
+  }, [play]);
 
   const reduce = typeof window !== "undefined" && prefersReducedMotion();
   let digitIndex = 0;
