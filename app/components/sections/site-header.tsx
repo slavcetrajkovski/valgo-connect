@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { label: "Why Valgo", hasMenu: true },
   { label: "Resources", hasMenu: true },
   { label: "Pricing" },
-  { label: "Enterprise" },
+  { label: "Entity setup" },
 ];
 
 /** Transparent overlay nav that sits on top of the hero. */

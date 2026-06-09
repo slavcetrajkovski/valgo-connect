@@ -9,7 +9,7 @@ const LINKS = [
   "Why Valgo",
   "Resources",
   "Pricing",
-  "Enterprise",
+  "Entity setup",
 ];
 
 /**

@@ -1,6 +1,6 @@
-import { HeroMarquee } from "@/app/components/sections/hero-marquee";
+import { HeroVideo } from "@/app/components/sections/hero-video";
 
-/** Hero: centered lime serif headline, with a horizontal image marquee beneath. */
+/** Hero: centered lime serif headline, with a showcase reel beneath. */
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-bg-dark">
@@ -17,8 +17,9 @@ export function Hero() {
           already vetted.
         </h1>
         <p className="mt-5 max-w-[600px] text-lg leading-relaxed text-fg-on-dark-2 lg:mt-6 lg:text-xl">
-          Senior engineers, designers and operators from Macedonia: screened,
-          timezone-aligned and contract-ready in days.
+          World-class North Macedonian talent for US businesses: developers,
+          designers, marketers, accountants and operators — screened,
+          time-zone aligned and ready in days.
         </p>
         <div className="mt-8 w-full max-w-[420px] sm:w-auto lg:mt-10">
           <a className="btn btn-accent btn-lg w-full sm:w-auto" href="#start">
@@ -28,12 +29,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* horizontal image marquee — two rows, opposite directions */}
-      <div aria-hidden className="relative space-y-4 pb-20 lg:space-y-5 lg:pb-28">
-        <HeroMarquee />
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-linear-to-r from-bg-dark to-transparent lg:w-32" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-linear-to-l from-bg-dark to-transparent lg:w-32" />
-      </div>
+      {/* showcase reel */}
+      <HeroVideo />
     </section>
   );
 }

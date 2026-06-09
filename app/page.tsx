@@ -4,6 +4,7 @@ import { LogoMarquee } from "@/app/components/sections/logo-marquee";
 import { HowItWorks } from "@/app/components/sections/how-it-works";
 import { FeatureGrid } from "@/app/components/sections/feature-grid";
 import { RoiStats } from "@/app/components/sections/roi-stats";
+import { RolesMarquee } from "@/app/components/sections/roles-marquee";
 import { WorkGallery } from "@/app/components/sections/work-gallery";
 import { ComparisonTable } from "@/app/components/sections/comparison-table";
 import { Testimonials } from "@/app/components/sections/testimonials";
@@ -20,6 +21,7 @@ export default function Home() {
         <HowItWorks />
         <FeatureGrid />
         <RoiStats />
+        <RolesMarquee />
         <WorkGallery />
         <ComparisonTable />
         <Testimonials />

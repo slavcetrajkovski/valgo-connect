@@ -24,7 +24,7 @@ const COMPARE_ROWS: CompareRow[] = [
   {
     name: "Valgo",
     brand: true,
-    desc: "Senior, pre-vetted specialists backed by matching built to strengthen every team.",
+    desc: "Pre-vetted North Macedonian professionals, fully managed and time-zone aligned — more value per dollar than nearly anywhere else.",
     marks: [true, true, true, true, true, true],
   },
   {

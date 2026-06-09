@@ -9,19 +9,24 @@ import { Photo } from "@/app/components/ui/photo";
 
 const FOOTER_SERVICES: FooterColumnData[] = [
   {
-    title: "Engineering",
+    title: "Web & Mobile",
     arrow: true,
-    links: ["Frontend", "Backend", "Mobile", "DevOps & cloud", "QA & automation"],
+    links: ["Web design", "Web development", "iOS apps", "Android apps", "QA & testing"],
   },
   {
-    title: "Design & Product",
+    title: "Marketing",
     arrow: true,
-    links: ["Product design", "UX research", "Brand & visual", "Design systems"],
+    links: ["Digital marketing", "SEO", "Paid media", "Social & content"],
   },
   {
-    title: "Data & AI",
+    title: "Back office & setup",
     arrow: true,
-    links: ["Data engineering", "Machine learning", "Analytics", "ML ops"],
+    links: [
+      "Accounting & finance",
+      "Operations & admin",
+      "HR & payroll",
+      "Entity setup & management",
+    ],
   },
 ];
 

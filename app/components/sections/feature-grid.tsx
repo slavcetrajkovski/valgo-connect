@@ -20,9 +20,9 @@ const FEATURE_CARDS = [
     accentClass: "text-lime-300",
     descClass: "text-fg-on-dark-2",
     pre: "Top ",
-    accent: "global tech talent",
+    accent: "Macedonian talent",
     post: "",
-    desc: "Senior engineers, designers and operators, screened for skill and communication long before they reach your inbox.",
+    desc: "Developers, designers, marketers, accountants and operators, screened for skill and communication long before they reach your inbox.",
   },
   {
     img: "valgo-feature-3",
@@ -30,10 +30,10 @@ const FEATURE_CARDS = [
     titleClass: "text-fg1",
     accentClass: "text-teal-700",
     descClass: "text-fg2",
-    pre: "",
-    accent: "Vetting-first",
-    post: " matching",
-    desc: "Every candidate clears a technical and communication screen, so your shortlist is ready to contribute from day one.",
+    pre: "Full ",
+    accent: "entity setup",
+    post: " & management",
+    desc: "Need your own presence abroad? We register your legal entity in North Macedonia and run payroll, HR, compliance, banking and day-to-day operations through a trusted local operator.",
   },
 ];
 
@@ -47,7 +47,7 @@ export function FeatureGrid() {
             Easy &amp; hassle-free
           </p>
           <h2 className="mx-auto mt-5 max-w-3xl text-balance font-sans text-display-xl text-fg-on-dark">
-            Senior talent. Smarter matching.{" "}
+            World-class talent. More value per dollar.{" "}
             <span className="accent-serif text-lime-300">
               Made to keep up with you.
             </span>

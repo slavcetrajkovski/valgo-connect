@@ -35,13 +35,13 @@ export function HowItWorks() {
             </span>
           </h2>
           <p className="mt-5 max-w-md leading-relaxed text-fg2">
-            Every candidate passes a technical and communication screen. Share a
-            role, and a matched shortlist lands in your inbox within 72 hours,
-            contract-ready, with no sourcing slog.
+            We recruit, vet and manage every professional, so you don&rsquo;t
+            have to. Share a role, and a matched shortlist lands in your inbox
+            within 72 hours, ready to start, with no sourcing slog.
           </p>
           <div className="mt-7 flex flex-wrap gap-x-10 gap-y-3 text-sm font-medium text-fg1">
-            <span>✓ Vetted seniors</span>
-            <span>✓ EU + US overlap</span>
+            <span>✓ Vetted &amp; managed</span>
+            <span>✓ US time-zone overlap</span>
             <span>✓ 30-day swap</span>
           </div>
         </Reveal>

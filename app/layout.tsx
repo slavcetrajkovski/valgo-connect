@@ -33,8 +33,9 @@ const anton = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Valgo Connect",
-  description: "Top Macedonian talent, connected to your business.",
+  title: "Valgo Connect — World-class Macedonian talent for US businesses",
+  description:
+    "Valgo Connect recruits, vets and manages highly educated professionals in North Macedonia for US businesses — talent outsourcing plus full foreign entity setup and management. More value per dollar.",
 };
 
 export default function RootLayout({
