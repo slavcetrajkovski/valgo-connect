@@ -37,11 +37,13 @@ const ogImage =
   "https://td633eg4xc.ufs.sh/f/1LKkK5jLRD7WInM843XnrmVfesKR5EYoa9pu0yzdQ6h7AFb3";
 
 export const metadata: Metadata = {
-  title: "Valgo Connect",
-  description: "Where US ambition meets European excellence.",
+  title: "Valgo Connect: Where US ambition meets European excellence.",
+  description:
+    "US companies use Valgo Connect to hire vetted talent in North Macedonia and save 60-70% on payroll costs. We handle entity setup, HR, compliance, and ongoing management.",
   openGraph: {
     title: "Valgo Connect",
-    description: "Where US ambition meets European excellence.",
+    description:
+      "US companies use Valgo Connect to hire vetted talent in North Macedonia and save 60-70% on payroll costs. We handle entity setup, HR, compliance, and ongoing management.",
     type: "website",
     images: [
       {
@@ -55,7 +57,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Valgo Connect",
-    description: "Where US ambition meets European excellence.",
+    description:
+      "US companies use Valgo Connect to hire vetted talent in North Macedonia and save 60-70% on payroll costs. We handle entity setup, HR, compliance, and ongoing management.",
     images: [ogImage],
   },
 };
