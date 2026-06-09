@@ -73,7 +73,6 @@ export function FeatureGrid() {
                     </span>
                     {c.post}
                   </h3>
-                  {/* collapsed on desktop until hover; always open on touch */}
                   <div className="grid grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr]">
                     <div className="overflow-hidden">
                       <p
