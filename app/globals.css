@@ -259,6 +259,46 @@ body {
   }
 }
 
+/* Hero connection visual */
+@keyframes arc-flow {
+  to {
+    stroke-dashoffset: -16;
+  }
+}
+@keyframes arc-travel {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  12%,
+  88% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+@keyframes node-ping {
+  from {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  to {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+@keyframes chip-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
 @layer base {
   :focus-visible {
     outline: 2px solid var(--ring-color);

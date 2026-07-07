@@ -11,7 +11,7 @@ const FEATURE_CARDS = [
     pre: "",
     accent: "Flexible",
     post: " engagement model",
-    desc: "Access a broad range of senior specialists, scale up or down as needed, and only pay for the talent you actually use.",
+    desc: "Only pay for the talent you actually use. Scale up or down as needed, across any role or seniority level, with no long-term commitments.",
   },
   {
     img: "valgo-feature-2",
@@ -33,7 +33,7 @@ const FEATURE_CARDS = [
     pre: "Full ",
     accent: "entity setup",
     post: " & management",
-    desc: "Need your own presence abroad? We register your legal entity in North Macedonia and run payroll, HR, compliance, banking and day-to-day operations through a trusted local operator.",
+    desc: "We register your legal entity in North Macedonia and handle payroll, HR, compliance, banking and day-to-day operations, so you never have to think about local admin again.",
   },
 ];
 
@@ -43,13 +43,13 @@ export function FeatureGrid() {
       <div className="mx-auto w-full max-w-6xl px-6 py-24 lg:py-32">
         <Reveal className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-fg-on-dark-2">
-            Easy &amp; hassle-free
+            What you actually get
           </p>
-          <h2 className="mx-auto mt-5 max-w-3xl text-balance font-sans text-display-xl text-fg-on-dark">
-            World-class talent. More value per dollar.{" "}
-            <span className="accent-serif text-lime-300">
-              Made to keep up with you.
-            </span>
+          <h2 className="mx-auto mt-5 text-balance font-sans text-display-xl text-fg-on-dark">
+            Top talent. A fraction of US rates.{" "}
+            <div className="accent-serif text-lime-300">
+              Without the overhead of hiring.
+            </div>
           </h2>
         </Reveal>
 

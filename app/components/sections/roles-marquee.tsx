@@ -10,8 +10,8 @@ export function RolesMarquee() {
           One partner, every role
         </p>
         <h2 className="mx-auto mt-5 text-balance font-sans text-display-lg text-lime-300">
-          Engineers, designers, marketers{" "}
-          <span className="accent-serif">and operators.</span>
+          Whoever you need,{" "}
+          <span className="accent-serif">vetted and ready to deliver.</span>
         </h2>
       </Reveal>
 

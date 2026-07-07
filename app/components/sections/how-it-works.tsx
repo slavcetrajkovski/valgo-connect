@@ -37,12 +37,12 @@ export function HowItWorks() {
           <p className="mt-5 max-w-md leading-relaxed text-fg2">
             We recruit, vet and manage every professional, so you don&rsquo;t
             have to. Share a role, and a matched shortlist lands in your inbox
-            within 72 hours, ready to start, with no sourcing slog.
+            within 72 hours, ready to start.
           </p>
           <div className="mt-7 flex flex-wrap gap-x-10 gap-y-3 text-sm font-medium text-fg1">
             <span>✓ Vetted &amp; managed</span>
             <span>✓ US time-zone overlap</span>
-            <span>✓ 30-day swap</span>
+            <span>✓ 30-day replacement guarantee</span>
           </div>
         </Reveal>
       </div>

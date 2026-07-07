@@ -5,7 +5,6 @@ import {
   type FooterColumnData,
 } from "@/app/components/ui/footer-column";
 import { SocialLink } from "@/app/components/ui/social-link";
-import { Photo } from "@/app/components/ui/photo";
 
 const FOOTER_SERVICES: FooterColumnData[] = [
   {
@@ -41,7 +40,7 @@ const FOOTER_COMPANY: FooterColumnData[] = [
   },
 ];
 
-const LEGAL_LINKS = ["Privacy policy", "Terms of use", "Status", "DMCA"];
+const LEGAL_LINKS = ["Privacy policy", "Terms of use", "Status page", "DMCA"];
 
 const SOCIALS: { label: string; icon: ReactNode }[] = [
   {
@@ -80,22 +79,15 @@ const SOCIALS: { label: string; icon: ReactNode }[] = [
   },
 ];
 
-/** Image-backed footer with link columns, oversized wordmark, and socials. */
+/** Link-column footer: services + navigation, wordmark, legal, and socials. */
 export function SiteFooter() {
   return (
-    <footer className="relative overflow-hidden bg-bg-dark text-fg-on-dark">
-      <Photo
-        seed="valgo-footer"
-        width={1600}
-        height={900}
-        className="absolute inset-0 h-full w-full object-cover opacity-20"
-      />
-      <div className="absolute inset-0 bg-linear-to-b from-teal-900/85 via-teal-900/90 to-teal-900" />
-
-      <div className="relative mx-auto w-full max-w-6xl px-6 py-20 lg:py-24">
-        <div className="grid gap-14 lg:grid-cols-[1.35fr_1fr]">
+    <footer className="bg-bg-dark text-fg-on-dark">
+      <div className="mx-auto w-full max-w-[88rem] px-6 py-16 lg:px-10 lg:py-20">
+        {/* link columns */}
+        <div className="grid gap-12 border-t border-white/10 pt-12 lg:grid-cols-[1.55fr_1fr] lg:gap-20">
           <div>
-            <h3 className="text-sm font-semibold text-fg-on-dark">Services</h3>
+            <h3 className="text-xl font-semibold text-fg-on-dark">Services</h3>
             <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3">
               {FOOTER_SERVICES.map((col) => (
                 <FooterColumn key={col.title} col={col} />
@@ -103,7 +95,9 @@ export function SiteFooter() {
             </div>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-fg-on-dark">Company</h3>
+            <h3 className="text-xl font-semibold text-fg-on-dark">
+              Navigation
+            </h3>
             <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-10">
               {FOOTER_COMPANY.map((col) => (
                 <FooterColumn key={col.title} col={col} />
@@ -112,29 +106,34 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* giant wordmark */}
-        <div className="mt-16 overflow-hidden">
-          <p className="font-sans text-[15vw] font-semibold leading-none tracking-tight text-fg-on-dark/95 sm:text-[12vw]">
-            Valgo <span className="accent-serif text-lime-300">Connect</span>
-          </p>
-        </div>
+        {/* wordmark / legal / socials */}
+        <div className="mt-20 grid gap-10 lg:grid-cols-3 lg:items-center">
+          <div className="flex flex-col items-start gap-4">
+            <Image
+              src="/brand/logo-horizontal-white.png"
+              alt="Valgo Connect"
+              width={300}
+              height={66}
+              className="h-14 w-auto lg:h-16"
+            />
+            <p className="text-sm text-fg-on-dark-2">
+              © {new Date().getFullYear()} Valgo Connect. All rights reserved.
+            </p>
+          </div>
 
-        <div className="mt-12 flex flex-col gap-8 border-t border-white/10 pt-10 md:flex-row md:items-center md:justify-between">
-          <p className="text-sm text-fg-on-dark-2">
-            © {new Date().getFullYear()} Valgo Connect. All rights reserved.
-          </p>
-          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-fg-on-dark-2">
+          <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-fg-on-dark-2 lg:justify-center">
             {LEGAL_LINKS.map((l) => (
               <a
                 key={l}
                 href="#"
-                className="transition-colors hover:text-fg-on-dark"
+                className="underline decoration-white/25 underline-offset-4 transition-colors hover:text-fg-on-dark hover:decoration-white/60"
               >
                 {l}
               </a>
             ))}
           </div>
-          <div className="flex items-center gap-3">
+
+          <div className="flex items-center gap-3 lg:justify-end">
             {SOCIALS.map((s) => (
               <SocialLink key={s.label} label={s.label}>
                 {s.icon}

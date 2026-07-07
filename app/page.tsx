@@ -7,7 +7,7 @@ import { RoiStats } from "@/app/components/sections/roi-stats";
 import { RolesMarquee } from "@/app/components/sections/roles-marquee";
 import { WorkGallery } from "@/app/components/sections/work-gallery";
 import { ComparisonTable } from "@/app/components/sections/comparison-table";
-import { Testimonials } from "@/app/components/sections/testimonials";
+import { Founder } from "@/app/components/sections/founder";
 import { CtaBand } from "@/app/components/sections/cta-band";
 import { SiteFooter } from "@/app/components/sections/site-footer";
 
@@ -24,7 +24,7 @@ export default function Home() {
         <RolesMarquee />
         <WorkGallery />
         <ComparisonTable />
-        <Testimonials />
+        <Founder />
         <CtaBand />
       </main>
       <SiteFooter />

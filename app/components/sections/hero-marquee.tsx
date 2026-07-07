@@ -13,7 +13,6 @@ const ROW_A: Card[] = [
   { kind: "lime", label: "300+ vetted specialists" },
   { kind: "img", seed: "voffice", aspect: "aspect-[4/3]" },
   { kind: "img", seed: "vcode", aspect: "aspect-[4/5]" },
-  { kind: "stat", value: "4.9", label: "Avg client rating" },
   { kind: "img", seed: "vstudio", aspect: "aspect-[4/3]" },
 ];
 

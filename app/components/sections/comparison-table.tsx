@@ -24,7 +24,7 @@ const COMPARE_ROWS: CompareRow[] = [
   {
     name: "Valgo",
     brand: true,
-    desc: "Pre-vetted North Macedonian professionals, fully managed and time-zone aligned — more value per dollar than nearly anywhere else.",
+    desc: "Pre-vetted North Macedonian professionals, fully managed and time-zone aligned. Top talent at a fraction of US rates, with one local operator handling everything.",
     marks: [true, true, true, true, true, true],
   },
   {
@@ -48,7 +48,7 @@ const COMPARE_ROWS: CompareRow[] = [
   {
     name: "Offshore outsourcing",
     icon: "globe",
-    desc: "Cheap on paper, but timezone gaps and thin screening cost you quality and speed.",
+    desc: "Lower rates on paper, but timezone gaps and thin screening cost you quality and speed.",
     marks: [true, false, false, true, true, false],
   },
 ];

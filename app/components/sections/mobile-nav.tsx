@@ -4,12 +4,10 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const LINKS = [
-  "Services",
-  "Our talent",
-  "Why Valgo",
-  "Resources",
-  "Pricing",
-  "Entity setup",
+  { label: "What we offer", href: "#offer" },
+  { label: "Why North Macedonia", href: "#why" },
+  { label: "How it works", href: "#how" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 /**
@@ -112,10 +110,10 @@ export function MobileNav() {
         </div>
 
         <nav className="mt-8 flex flex-col gap-1 px-3">
-          {LINKS.map((label) => (
+          {LINKS.map(({ label, href }) => (
             <a
               key={label}
-              href="#"
+              href={href}
               onClick={() => setOpen(false)}
               className="group flex items-center justify-between rounded-xl px-3 py-3.5 text-2xl font-medium text-fg-on-dark transition-colors hover:bg-white/5 hover:text-lime-300"
             >
@@ -131,12 +129,13 @@ export function MobileNav() {
         </nav>
 
         <div className="mt-auto border-t border-white/10 p-6">
+          {/* TODO: point at cal.com booking link */}
           <a
-            href="#start"
+            href="#book"
             onClick={() => setOpen(false)}
             className="btn btn-accent btn-lg w-full"
           >
-            Find your team
+            Book a call
             <span aria-hidden>→</span>
           </a>
         </div>

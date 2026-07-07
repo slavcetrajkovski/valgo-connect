@@ -4,13 +4,12 @@ import { Reveal, SlotNumber, useInView } from "@/app/components/motion";
 
 const ROI_STATS = [
   {
-    value: "300+",
-    desc: "Startups, scale-ups and enterprises trust Valgo to staff senior talent, fast.",
+    value: "30+",
+    desc: "Professionals placed and actively working across client teams.",
   },
   {
-    value: "12k+",
+    value: "6k+",
     desc: "Engineering and design hours delivered across client teams every month.",
-    link: true,
   },
   {
     value: "94%",
@@ -19,7 +18,6 @@ const ROI_STATS = [
   {
     value: "72h",
     desc: "Median time from a brief to a matched, contract-ready shortlist.",
-    link: true,
   },
 ];
 
@@ -52,15 +50,6 @@ export function RoiStats() {
               <div className="flex items-end justify-between gap-6 border-b border-border pb-6">
                 <div className="max-w-[16rem]">
                   <p className="leading-relaxed text-fg2">{r.desc}</p>
-                  {r.link && (
-                    <a
-                      href="#"
-                      className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-fg1 transition-colors hover:text-teal-700"
-                    >
-                      Read the talent benchmark report
-                      <span aria-hidden>↗</span>
-                    </a>
-                  )}
                 </div>
                 <SlotNumber
                   value={r.value}
