@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { BOOKING_URL } from "@/app/lib/links";
 
 const LINKS = [
   { label: "What we offer", href: "#offer" },
@@ -129,9 +130,10 @@ export function MobileNav() {
         </nav>
 
         <div className="mt-auto border-t border-white/10 p-6">
-          {/* TODO: point at cal.com booking link */}
           <a
-            href="#book"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="btn btn-accent btn-lg w-full"
           >

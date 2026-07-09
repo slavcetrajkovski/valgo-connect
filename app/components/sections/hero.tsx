@@ -1,4 +1,5 @@
 import { HeroConnection } from "@/app/components/sections/hero-connection";
+import { BOOKING_URL } from "@/app/lib/links";
 
 export function Hero() {
   return (
@@ -32,7 +33,12 @@ export function Hero() {
             workflow.
           </p>
           <div className="mt-8 flex justify-center lg:mt-10 lg:justify-start">
-            <a className="btn btn-accent btn-lg w-full sm:w-auto" href="#start">
+            <a
+              className="btn btn-accent btn-lg w-full sm:w-auto"
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Find your team
               <span aria-hidden>→</span>
             </a>

@@ -1,4 +1,5 @@
 import { Reveal } from "@/app/components/motion";
+import { BOOKING_URL } from "@/app/lib/links";
 
 /** Closing call-to-action band. */
 export function CtaBand() {
@@ -17,13 +18,20 @@ export function CtaBand() {
             hours. No retainers, no risk.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a className="btn btn-accent btn-lg" href="#start">
+            <a
+              className="btn btn-accent btn-lg"
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Find your team
               <span aria-hidden>→</span>
             </a>
             <a
               className="btn btn-lg border border-white/25 text-fg-on-dark hover:bg-white/10"
-              href="#how"
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Talk to us
             </a>

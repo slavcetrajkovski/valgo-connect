@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { NavItem } from "@/app/components/ui/nav-item";
 import { MobileNav } from "@/app/components/sections/mobile-nav";
+import { BOOKING_URL } from "@/app/lib/links";
 
 const NAV_LINKS = [
   { label: "What we offer", href: "#offer" },
@@ -28,8 +29,12 @@ export function SiteHeader() {
           ))}
         </div>
         <div className="flex items-center gap-3">
-          {/* TODO: point at cal.com booking link */}
-          <a className="btn btn-accent btn-sm hidden sm:inline-flex" href="#book">
+          <a
+            className="btn btn-accent btn-sm hidden sm:inline-flex"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Book a call
           </a>
           <MobileNav />
